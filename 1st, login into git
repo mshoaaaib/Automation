@@ -15,13 +15,13 @@ public class seleniumfirst {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("/html/body/div[1]/header/div/div[2]/div/div/div[2]/a")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath("/html/body/div[3]/main/div/div[4]/form/input[2]")).sendKeys("muhammadshoaibajk@gmail.com");
-		driver.findElement(By.xpath("/html/body/div[3]/main/div/div[4]/form/div/input[1]")).sendKeys("Laserjet@5");
-		driver.findElement(By.xpath("/html/body/div[3]/main/div/div[4]/form/div/input[11]")).click();
+		driver.findElement(By.xpath("//input[@name='login']")).sendKeys("muhammadshoaibajk@gmail.com");
+		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Laserjet@5");
+		driver.findElement(By.xpath("//input[@name='commit']")).click();
 		Thread.sleep(1000);
-		String actual_response=(driver.findElement(By.xpath("/html/body/div[5]/div/div/div/div/div/main/div[1]/h1")).getText());
+		String actual_response=(driver.findElement(By.xpath("//h1[@class='h1 lh-condensed mb-2']")).getText());
 		String expected_response="The home for all developers � including you.";
-		
+		System.out.println(driver.findElement(By.xpath("//h1[@class='h1 lh-condensed mb-2']")).getText());
 		if(actual_response==expected_response)
 		{
 			System.out.println("Test Passed");
