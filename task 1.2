@@ -1,0 +1,22 @@
+package first;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Task1_2 {
+	public static void main(String[]aargs) throws InterruptedException
+	{
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://www.way2automation.com/way2auto_jquery/frames-and-windows.php");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[@href='#example-1-tab-1']")).click();
+		Thread.sleep(2000);
+		
+		
+		
+		
+	}
+
+}
